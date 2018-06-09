@@ -1,5 +1,5 @@
 body {
-	background: url('../../img/bg1.jpg') no-repeat;
+	background: url('../../img/home_background.jpg') no-repeat;
 	background-size: cover;
 }
 
@@ -18,9 +18,32 @@ h1#promocoes {
 	color: white;
 }
 
+/*.descricao {
+	background:  #0033cc;
+	color: white;
+	width: 100%;
+}
+.descricao p {
+	margin: 0;
+}*/
+button.encomendar {
+	background-color: black;
+	color: white;
+}
+
+button.encomendar:hover {
+	background-color: grey;
+	color: white;
+}
+.panel-footer {
+	text-align: center;
+	font-size: 1.3em;
+}
 /*FOOTER*/
-#footer > div.row {
+#footer {
 	background-color: black; 
 	color: white; 
-	font-size: 2em;
+	font-size: 1.8em;
+	padding-top: 30px;
 }
+
