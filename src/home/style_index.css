@@ -1,0 +1,26 @@
+body {
+	background: url('../../img/bg1.jpg') no-repeat;
+	background-size: cover;
+}
+
+/*HEADER*/
+a.navbar-brand { padding: 3px 25px 0 15px; }
+
+ul.nav {	font-size: 1.6em;  }
+
+button#registrar {	margin-left: 15px;  }
+
+/*MAIN*/
+div#main { margin-bottom: 40px; }
+
+h1#promocoes {
+	text-align: center; 
+	color: white;
+}
+
+/*FOOTER*/
+#footer > div.row {
+	background-color: black; 
+	color: white; 
+	font-size: 2em;
+}
