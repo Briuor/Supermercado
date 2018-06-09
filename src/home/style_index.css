@@ -18,14 +18,6 @@ h1#promocoes {
 	color: white;
 }
 
-/*.descricao {
-	background:  #0033cc;
-	color: white;
-	width: 100%;
-}
-.descricao p {
-	margin: 0;
-}*/
 button.encomendar {
 	background-color: black;
 	color: white;
@@ -34,6 +26,20 @@ button.encomendar {
 button.encomendar:hover {
 	background-color: grey;
 	color: white;
+}
+
+.panel {
+	border-radius: 0;
+}
+a.link-produto {
+	color: black;
+}
+a.link-produto:hover > div {
+	opacity: 0.8;
+}
+a.link-produto:hover {
+	color: grey;
+	text-decoration: none;
 }
 .panel-footer {
 	text-align: center;
@@ -46,4 +52,3 @@ button.encomendar:hover {
 	font-size: 1.8em;
 	padding-top: 30px;
 }
-
