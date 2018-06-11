@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" href="../home/style_index.css">
+	<link rel="stylesheet" href="admin.css">
+	<script src="adminMenu.js"></script>
 
 </head>
 <body>
@@ -33,25 +35,26 @@
 		</nav>
 
 		<!-- MAIN -->
-		<div class="container" id="main">
+		<div class="container">
       <div class="row">
         <div class="list-group col-sm-3">
-          <a href="#" class="list-group-item list-group-item-action active">Produtos    </a>
-          <a href="#" class="list-group-item list-group-item-action">Usuário     </a>
-          <a href="#" class="list-group-item list-group-item-action">Encomendas  </a>
-          <a href="#" class="list-group-item list-group-item-action">Fornecedores</a>
+          <button onclick="btn1()" id="btn1" type="button" href="#" class="list-group-item list-group-item-action active" style="width: 100%">Produtos</button>
+          <button onclick="btn2()" id="btn2" type="button" href="#" class="list-group-item list-group-item-action" style="width: 100%">Usuários</button>
+          <a id="btn3" href="#" class="list-group-item list-group-item-action">				Encomendas  </a>
+          <a id="btn4" href="#" class="list-group-item list-group-item-action">				Fornecedores</a>
         </div>
 
-        <div class="col-sm-9 bg-success">
-          <h1>Produtos</h1>
+        <div id="products" class="col-sm-9 bg-success">
+          <h1 class="border-black">Produtos</h1>
           <br>
-          <div class="row">
+          <div class="row border">
             <div class="col-sm-1" style="height:75px">
               <i class="fas fa-plus"></i>
               <p>Adicionar produto</p>
             </div>
           </div>
-          <div class="row">
+					<br>
+          <div class="row border">
             <div class="col-sm-3">
               <img src="../../img/produtos/limpeza/detergente.jpg" style="width="50px" height="75px"">
             </div>
@@ -66,7 +69,7 @@
             </div>
           </div>
           <br>
-          <div class="row">
+          <div class="row border">
             <div class="col-sm-3">
               <img src="../../img/produtos/limpeza/detergente.jpg" style="width="50px" height="75px"">
             </div>
@@ -81,7 +84,7 @@
             </div>
           </div>
           <br>
-          <div class="row">
+          <div class="row border">
             <div class="col-sm-3">
               <img src="../../img/produtos/limpeza/detergente.jpg" style="width="50px" height="75px"">
             </div>
@@ -96,7 +99,7 @@
             </div>
           </div>
           <br>
-          <div class="row">
+          <div class="row border">
             <div class="col-sm-3">
               <img src="../../img/produtos/limpeza/detergente.jpg" style="width="50px" height="75px"">
             </div>
@@ -112,94 +115,74 @@
           </div>
           <br>
 		</div>
-</div>
-		<!-- FOOTER -->
-		<div class="container-fluid" id="footer">
-			<div class="row">
-				<div class="col-md-3 col-xs-12">
-					<p><i class="fab fa-whatsapp"></i> (35) 9 8884-1854</p>
-					<p><i class="far fa-envelope"></i> supertiao@gmail.com</p>
-					<p><i class="fas fa-map-marker"></i> Av. Coronel Fernando Prestes, 369 Itajubá - MG</p>
+
+		<div id="users" class="col-sm-9 bg-success display-0">
+			<h1 class="border-black">Usuários</h1>
+			<br>
+			<div class="row border">
+				<div class="col-sm-3">
+					<i class="fas fa-user" style="font-size: 25px;"></i>
 				</div>
-				<div class="col-md-3 col-xs-12">
-					<p><i class="fas fa-phone"></i> (35) 3623-5566</p>
-					<p><i class="far fa-clock"></i> de 2ª a Sábado, das 8h às 21h</p>
-					<p>CNPJ: 137-472-966/5555-69</p>
+				<div class="col-sm-3">
+					<p> João Pedro </p>
 				</div>
-				<div class="col-md-3 col-md-offset-1 col-xs-12">
-					<img src="../../img/img-cartoes.png" >
+				<div class="col-sm-3">
+					<i class="fas fa-edit"></i>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-trash-alt"></i>
 				</div>
 			</div>
+			<br>
+			<div class="row border">
+				<div class="col-sm-3">
+					<i class="fas fa-user" style="font-size: 25px;"></i>
+				</div>
+				<div class="col-sm-3">
+					<p> Matheus Lobo </p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-edit"></i>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-trash-alt"></i>
+				</div>
+			</div>
+			<br>
+			<div class="row border">
+				<div class="col-sm-3">
+					<i class="fas fa-user" style="font-size: 25px;"></i>
+				</div>
+				<div class="col-sm-3">
+					<p> Bruno Alves </p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-edit"></i>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-trash-alt"></i>
+				</div>
+			</div>
+			<br>
+			<div class="row border">
+				<div class="col-sm-3">
+					<i class="fas fa-user" style="font-size: 25px;"></i>
+				</div>
+				<div class="col-sm-3">
+					<p> Edinaldo da Silva	 </p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-edit"></i>
+				</div>
+				<div class="col-sm-3">
+					<i class="fas fa-trash-alt"></i>
+				</div>
+			</div>
+			<br>
 		</div>
-
-<!-- MODAL DE REGISTRAR -->
-<div class="modal fade" id="registrarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Registre-se</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-        	<div class="form-group">
-        		<label>Usuário:</label>
-        		<input class="form-control" type="text">
-        		<label>Email:</label>
-        		<input class="form-control" type="text">
-        		<label>Endereço:</label>
-        		<input class="form-control" type="text">
-        		<label>Senha:</label>
-        		<input class="form-control" type="password">
-        		<label>Confirmar Senha:</label>
-        		<input class="form-control" type="password">
-        		<label>Cartao:</label><br />
-				<select name="cartoes">
-				    <option value="master Card">master Card</option>
-				    <option value="visa">visa</option>
-				    <option value="rede shop">rede shop</option>
-				    <option value="american express">american express</option>
-				    <option value="credicard sa">credicard sa</option>
-				    <option value="vr benefícios">vr benefícios</option>
-				    <option value="plantao card">plantao card</option>
-				    <option value="cartao excelsior">cartao excelsior</option>
-				</select>
-        	</div>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Registrar</button>
-      </div>
-    </div>
-  </div>
+	</div>
 </div>
 
-<!-- MODAL DE ENTRAR -->
-<div class="modal fade" id="entrarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Entrar</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-        	<div class="form-group">
-        		<label>Usuário:</label>
-        		<input class="form-control" type="text">
-        		<label>Senha:</label>
-        		<input class="form-control" type="password">
-        	</div>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Entrar</button>
-      </div>
-    </div>
-  </div>
-</div>
 	<!-- JQUERY -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
