@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Produtos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/sidebar-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu1.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/sidebar1-1.css">
+    <link rel="stylesheet" href="assets/css/sidebar1.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css
+">
+
+    <style type="text/css">
+    	.editar, .ver {
+    		margin-right: 10px;
+
+    	}
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+            	<img class="img-responsive img-thumbnail mx-auto d-block" src="assets/img/foto.jpg">
+                <li class="sidebar-brand"> <a href="adminPaginaProdutos.html" style="color:rgb(255,255,255);">Admin Bruno</a></li>
+                <li> <a href="adminPaginaProdutos.html" style="color:rgb(7,0,0);background-color:#ffffff;">Produtos</a></li>
+                <li> <a href="adminPaginaCliente.html" >Clientes</a></li>
+                <li> <a href="adminPaginaProdutos.html">Encomendas</a><a href="#">Fornecedores</a></li>
+                <li> <a href="adminPaginaProdutos.html" style="color: tomato; margin-top: 100px;">Sair</a></li>
+            </ul>
+        </div>
+
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
+            	<div class="row">
+                    <div class="col-md-12">
+				    	<h1>Produtos</h1>
+						<nav class="navbar navbar-expand-lg navbar-light bg-light "  style="margin: 0 0 10px 0">
+							<button class="btn btn-success" type="button" 
+							data-toggle="modal" data-target="#cadastrar" style="margin-right: 10px;">Cadastrar Produto</button>
+						    <ul class="navbar-nav">
+						      <li class="nav-item active">
+						        <a class="nav-link active" href="#">Alimentos</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#">Bebidas</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#">Higiene</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link " href="#">Utensílios</a>
+						      </li>
+						    </ul>
+						</nav>
+
+					</div>
+					<div class="col-md-12">
+						<table class="table table-striped table-bordered" id="listaEncomendas">
+						    <thead>
+						      <tr>
+						        <th>Código</th>
+						        <th>Nome</th>
+						        <th>Preço(R$)</th>
+						        <th>Marca</th>
+						        <th>Fornecedor</th>
+						        <th>Operação</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>789232</td>
+						        <td>Achocolatado</td>
+						        <td>3,49</td>
+						        <td>Santa Amália</td>
+						        <td>Santa Amália</td>
+						        <td>
+						        	<button class="btn btn-warning" data-toggle="modal" data-target="#editar">Editar</button>
+						        	<button class="btn btn-danger" data-toggle="modal" data-target="#remover">Remover</button>
+						        </td>
+						      </tr>
+						      <tr>
+						        <td>789232</td>
+						        <td>Achocolatado</td>
+						        <td>3,49</td>
+						        <td>Santa Amália</td>
+						        <td>Santa Amália</td>
+						        <td>
+						        	<button class="btn btn-warning">Editar</button>
+						        	<button class="btn btn-danger">Remover</button>
+						        </td>
+						      </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+      
+       
+	        </div>
+	    </div>
+
+    <!-- MODAL DE CADASTRAR PRODUTO -->
+<div class="modal fade" id="cadastrar" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+        	<form class="form-group">
+
+        	  <div class="">
+			  	<span class="h4">Cadastrar Produto</span>
+	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	    	  </div>
+
+			  <label class="h5">Código</label>			  
+			  <input class="form-control" placeholder="" />
+			  <label class="h5">Nome:</label>
+			  <input class="form-control" placeholder="" />
+			  <label class="h5">Preço(R$):</label>
+			  <input class="form-control" placeholder="" />
+			  <label class="h5">Descrição:</label><br/>
+			  <textarea style="width: 100%">
+			  	
+			  </textarea>  <br />
+			  <label class="h5">Marca:</label>
+			  <input class="form-control" placeholder="" />
+			  <label class="h5">Fornecedor:</label>
+			  <input class="form-control" placeholder="" />
+
+	    	  <label class="h5">Imagem: </label>
+<!--     		  <img class="img-responsive" src="" style="width: 70px; height: 70px;"/>
+ -->    		  <input type="file" /><br />
+			</form>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Cadastrar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+    <!-- MODAL DE EDITAR -->
+<div class="modal fade" id="editar" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+        	<form class="form-group">
+
+        	  <div class="">
+			  	<span class="h4">Cadastrar Produto</span>
+	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	    	  </div>
+
+			  <label class="h5">Código</label>			  
+			  <input class="form-control" value="789232" />
+			  <label class="h5">Nome:</label>
+			  <input class="form-control" value="Achocolatado" />
+			  <label class="h5">Preço(R$):</label>
+			  <input class="form-control" value="3,49" />
+			  <label class="h5">Descrição:</label><br/>
+			  <textarea style="width: 100%">
+			  	
+			  </textarea>  <br />
+			  <label class="h5">Marca:</label>
+			  <input class="form-control" value="Santa Amália" />
+			  <label class="h5">Fornecedor:</label>
+			  <input class="form-control" value="Santa Amália" />
+
+	    	  <label class="h5">Imagem: </label>
+    		  <img class="img-responsive" src="assets/img/achocolatado.jpeg" style="width: 70px; height: 70px;"/><br />
+    		  <input type="file" /><br />
+			</form>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Cadastrar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+<!-- MODAL DE REMOVER -->
+<div class="modal fade" id="remover" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<div class="modal-header">
+        	<h4 class="modal-title">Tem Certeza?</h4>
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+      	</div>
+        <div class="modal-body">
+        	<p>Tem certeza que deseja remover o produto Achocolatado Santa Amália?</p>
+        	<button class="btn btn-danger" id="removerUsuario">Sim</button>
+        	<button class="btn btn-default" data-dismiss="modal">Nao</button>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
+
+<!-- MODAL DE LISTAR ENCOMENDAS DO CLIENTE -->
+<div class="modal fade" id="listarEncomenda" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<div class="modal-header">
+        	<h4 class="modal-title">Lista de Encomendas</h4>
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+      	</div>
+        <div class="modal-body">
+        	<table class="table table-striped table-bordered" id="listaEncomendas">
+		    <thead>
+		      <tr>
+		        <th>Data</th>
+		        <th>Produtos</th>
+		        <th>Preço Total</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>20/05/2018</td>
+		        <td>
+		        	Sabao em pó: 4 unidade(s)<br />
+		        	Detergente Ypê:2 unidade(s)<br />
+		        	Achocolatado Amália:1 unidade(s)<br />
+		        </td>
+		        <td>R$ 200,00</td>
+		      </tr>
+		      <tr>
+		        <td>17/05/2018</td>
+		        <td>
+		        	Sabao em pó: 4 unidade(s)<br />
+		        	Detergente Ypê:2 unidade(s)<br />
+		        	Achocolatado Amália:1 unidade(s)<br />
+		        </td>
+		        <td>R$ 200,00</td>
+		      </tr>
+		      <tr>
+		        <td>16/05/2018</td>
+		        <td>
+		        	Sabao em pó: 4 unidade(s)<br />
+		        	Detergente Ypê:2 unidade(s)<br />
+		        	Achocolatado Amália:1 unidade(s)<br />
+		        </td>
+		        <td>R$ 200,00</td>
+		      </tr>
+		    </tbody>
+		  </table>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $("#myTable tr").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});
+		$(document).ready(function() {
+		    $('#listaEncomendas').DataTable();
+		} );
+		// $('#removerUsuario').click(function(){
+		// 	alert('Usuario Bruno removido com sucesso!');
+		// });
+	</script>
+	
+
+</body>
+
+</html>
