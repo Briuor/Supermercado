@@ -14,3 +14,25 @@ a.none:active {
     color: white;
     text-decoration: none;
 }
+
+.sqare{
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+}
+
+.position-fixed{
+  z-index: 1000;
+}
+
+.mt-6{
+  margin-top: 100px;
+}
+
+.w-2{
+  width: 70px !important;
+}
+
+.price-font{
+  font-size: 1.5rem;
+}
