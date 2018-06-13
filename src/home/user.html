@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado</title>
+    <title>Supermercado BGL</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -35,7 +35,7 @@
             <div class="dropdown">
 
              <button class="btn btn-navbar dropdown-toggle" type="button" data-toggle="dropdown">
-               <span class="mr-2"> Olá, Breno! </span>
+               <span class="mr-2"> Olá, Bruno! </span>
                <i class="fas fa-user-circle font-icons"></i>
                <span class="caret"></span>
              </button>
@@ -53,37 +53,37 @@
 <!-- CONTENT -->
     <div class="features-clean">
         <div class="container-fluid">
+            <h1 class="text-center" style="color: rgb(50,122,188);">DADOS DE USUÁRIO</h1>
             <div class="row justify-content-md-center mt-3">
-                <div class="col-3">
-                        <ul class="list-unstyled fa-ul">
-                            <li><i class="fa fa-user fa-li"></i><a href="#">Bruno</a></li>
-                            <li><i class="fa fa-envelope fa-li"></i><a href="#">bruno@gmail.com </a></li>
-                            <li><i class="fa fa-phone fa-li"></i>(555) 555-5555</li>
-                        </ul>
+                <div class="col-md-6 offset-md-2" style="font-size: 2em;">
+                    <ul class="list-unstyled fa-ul">
+                        <li><i class="fa fa-user fa-li"></i>Bruno</li>
+                        <li><i class="fa fa-envelope fa-li"></i>bruno@gmail.com</li>
+                        <li><i class="fa fa-phone fa-li"></i>(555) 555-5555</li>
+                    </ul>
+                </div>
+                <div class="col-md-4" style="font-size: 1.5em;">
+                  <ul class="list-unstyled fa-ul text-muted">
+                    <li>Nome Completo: Bruno Lopes</li>
+                    <li><i class="far fa-calendar-alt"></i> Cliente desde: 09/08/2018</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Adolfo Tribist, Vila Isabel, 80</li>
+                    <li><i class="fas fa-archive"></i> Encomendas Efetuadas: 3</li>
+                  </ul>
                 </div>
             </div>
-            <hr>
-            <div class="row justify-content-md-center">
-              <ul class="list-unstyled fa-ul text-muted">
-                <li>Nome Completo: Bruno Lopes</li>
-                <li><i class="far fa-calendar-alt"></i> Data de Nascimento: 09/08/98</li>
-                <li><i class="fas fa-transgender"></i> Sexo: Masculino</li>
-                <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Tenório Barraco, BPS, 918</li>
-                <li><i class="fas fa-archive"></i> Encomendas Efetuadas: 10</li>
-              </ul>
-            </div>
+
         </div>
             <div class="card-footer">
                 <div class="btn-toolbar justify-content-md-center">
                     <div class="btn-group" role="group">
-                      <button class="btn btn-primary rounded" type="button" style="margin:10px;">Editar Perfil</button>
-                      <button class="btn btn-primary rounded" type="button" style="margin:10px;">Histórico de Encomendas</button>
+                      <button class="btn btn-warning rounded" data-toggle="modal" data-target="#editar" style="margin:10px; font-size: 1.5em;">Editar Perfil</button>
+                      <button class="btn btn-info rounded" data-toggle="modal" data-target="#listarEncomenda" style="margin:10px; font-size: 1.5em;">Histórico de Encomendas</button>
                     </div>
                 </div>
             </div>
         </div>
         <section>
-            <div id="productlist" style="margin:0px;margin-top:0px;padding:10px;margin-right:0px;margin-left:0px;padding-top:20px;padding-bottom:10px;">
+            <div id="productlist" style="margin:0px;margin-top:0px;padding:10px;margin-right:0px;margin-left:0px;padding-top:20px;padding-bottom:10px; height: auto;">
                 <h1 class="text-uppercase text-center" style="margin-bottom:1px;color:rgb(50,122,188);">produtos recomendados</h1>
                 <div class="container" style="padding:10px;">
                     <div class="row" style="margin:10px;margin-right:0px;margin-left:0px;margin-top:10px;margin-bottom:10px;padding:10px;">
@@ -91,23 +91,23 @@
                             <div class="card-container-imagia">
                                 <div class="card-imagia">
                                     <div class="front-imagia">
-                                        <div class="cover-imagia" style="height:300px;"><img src="https://unsplash.it/720/500?image=1067" alt="" style="height:300px;"></div>
+                                        <div class="cover-imagia" style="height:300px;"><img src="../admin/assets/img/achocolatado.jpeg" alt="" style="height:300px;"></div>
                                         <div class="content-imagia">
-                                            <h3 class="name-imagia">John Doe</h3>
-                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <h3 class="name-imagia">Achocolatado</h3>
+                                            <p class="subtitle-imagia">R$ 3,49</p>
                                         </div>
-                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                                        <div class="footer-imagia" ><span>Ver</span></div>
                                     </div>
                                     <div class="back-imagia">
                                         <div class="content-imagia content-back-imagia">
                                             <div>
-                                                <h3 class="text-center">Lorem Ipsum</h3>
-                                                <p class="text-center">Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix
-                                                    interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                                <h3 class="text-center">Achocolatado Amália</h3>
+                                                <p class="text-center">
+                                                    <b>Ingredientes:</b>Açúcar, cacau, extrato de malte, sal, leite em pó desnatado, soro de leite em pó, vitaminas (A, B1, B2, B6, C, D3 e PP), estabilizante lecitina de soja e aromatizantes.</p>
                                             </div>
                                         </div>
                                         <div class="footer-imagia">
-                                            <div class="social-imagia text-center"><a href="#"><i class="icon ion-more"></i></a></div>
+                                            <button class="btn btn-success  ">Comprar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -117,23 +117,22 @@
                             <div class="card-container-imagia">
                                 <div class="card-imagia">
                                     <div class="front-imagia">
-                                        <div class="cover-imagia" style="height:300px;"><img src="https://unsplash.it/720/500?image=1067" alt="" style="height:300px;"></div>
+                                        <div class="cover-imagia" style="height:300px;"><img src="../admin/assets/img/qualy.jpg" alt="" style="height:300px;"></div>
                                         <div class="content-imagia">
-                                            <h3 class="name-imagia">John Doe</h3>
-                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <h3 class="name-imagia">Margarina</h3>
+                                            <p class="subtitle-imagia">R$ 2,49 </p>
                                         </div>
-                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                                        <div class="footer-imagia"><span>Ver</span></div>
                                     </div>
                                     <div class="back-imagia">
                                         <div class="content-imagia content-back-imagia">
                                             <div>
-                                                <h3 class="text-center">Lorem Ipsum</h3>
-                                                <p class="text-center">Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix
-                                                    interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                                <h3 class="text-center">Margarina Qualy</h3>
+                                                <p class="text-center"><b>Ingredientes:</b> gorduras vegetais hidrogenadas, sebo animal, ácido sulfúrico, leite de vaca, soda cáustica, ácido benzoico, ácido butil hidroxitolueno (explosivo), galato propila, corante artificial (CI, CII, etc.), aromatizantes artificiais (PI, PIV), antioxidantes artificiais (AV, AVI e AVIII), estabilizantes</p>
                                             </div>
                                         </div>
                                         <div class="footer-imagia">
-                                            <div class="social-imagia text-center"><a href="#"><i class="icon ion-more"></i></a></div>
+                                            <button class="btn btn-success  ">Comprar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -143,23 +142,22 @@
                             <div class="card-container-imagia">
                                 <div class="card-imagia">
                                     <div class="front-imagia">
-                                        <div class="cover-imagia" style="height:300px;"><img src="https://unsplash.it/720/500?image=1067" alt="" style="height:300px;"></div>
+                                        <div class="cover-imagia" style="height:300px;"><img src="../admin/assets/img/cafe.jpg" alt="" style="height:300px;"></div>
                                         <div class="content-imagia">
-                                            <h3 class="name-imagia">John Doe</h3>
-                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <h3 class="name-imagia">Café</h3>
+                                            <p class="subtitle-imagia">3,99</p>
                                         </div>
-                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                                        <div class="footer-imagia"><span>Ver</span></div>
                                     </div>
                                     <div class="back-imagia">
                                         <div class="content-imagia content-back-imagia">
                                             <div>
-                                                <h3 class="text-center">Lorem Ipsum</h3>
-                                                <p class="text-center">Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix
-                                                    interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                                <h3 class="text-center">Café Caboclo</h3>
+                                                <p class="text-center"><b>Ingredientes:</b> Café Torrado e Moído.</p>
                                             </div>
                                         </div>
                                         <div class="footer-imagia">
-                                            <div class="social-imagia text-center"><a href="#"><i class="icon ion-more"></i></a></div>
+                                            <button class="btn btn-success  ">Comprar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -169,23 +167,22 @@
                             <div class="card-container-imagia">
                                 <div class="card-imagia">
                                     <div class="front-imagia">
-                                        <div class="cover-imagia" style="height:300px;"><img src="https://unsplash.it/720/500?image=1067" alt="" style="height:300px;"></div>
+                                        <div class="cover-imagia" style="height:300px;"><img src="../admin/assets/img/detergente.jpg" alt="" style="height:300px;"></div>
                                         <div class="content-imagia">
-                                            <h3 class="name-imagia">John Doe</h3>
-                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <h3 class="name-imagia">Detergente</h3>
+                                            <p class="subtitle-imagia">R$ 4,99</p>
                                         </div>
-                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                                        <div class="footer-imagia"><span>Ver</span></div>
                                     </div>
                                     <div class="back-imagia">
                                         <div class="content-imagia content-back-imagia">
                                             <div>
-                                                <h3 class="text-center">Lorem Ipsum</h3>
-                                                <p class="text-center">Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix
-                                                    interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                                <h3 class="text-center">Detergente</h3>
+                                                <p class="text-center">Controle de Odor controla os odores mais fortes da sua louça, como os de peixe, alho, cebola, ovo e etc.</p>
                                             </div>
                                         </div>
                                         <div class="footer-imagia">
-                                            <div class="social-imagia text-center"><a href="#"><i class="icon ion-more"></i></a></div>
+                                            <button class="btn btn-success  ">Comprar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -226,8 +223,111 @@
             </div>
         </footer>
     </div>
+
+    <!-- MODAL DE EDITAR PERFIL -->
+    <div class="modal fade" id="editar" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+            <form class="form-group">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+              <div class="">
+                <img class="img-responsive" src="../admin/assets/img/perfilusuario.jpg" style="width: 70px; height: 70px;"/>
+                <label class="h5">Imagem:</label>              
+                <input type="file" value="Foto de Perfil"/><br/>
+
+                <label class="h5">Nome:</label>              
+                <input class="form-control" value="Bruno Fernando Lopes" />
+                <label class="h5">Email:</label>              
+                <input class="form-control" value="bruno@gmail.com" />
+              </div>
+
+              <label class="h5">CEP:</label>              
+              <input class="form-control" value="37505-192" />
+              <label class="h5">Estado:</label>
+              <input class="form-control" value="Minas Gerais" />
+              <label class="h5">Cidade:</label>
+              <input class="form-control" value="Itajubá" />
+              <label class="h5">Rua/Avenida:</label>
+              <input class="form-control" value="Adolfo Tribist" />
+              <label class="h5">Número:</label>
+              <input class="form-control" value="80" />
+              <label class="h5">Complemento:</label>
+              <input class="form-control" value="Perto da Gráfica Fernanda" />
+              <label class="h5">Bairro:</label>
+              <input class="form-control" value="Vila Isabel" />
+            </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Salvar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+<!-- MODAL DE LISTAR ENCOMENDAS DO CLIENTE -->
+<div class="modal fade" id="listarEncomenda" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Lista de Encomendas</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-striped table-bordered" id="listaEncomendas">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Produtos</th>
+                <th>Preço Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20/05/2018</td>
+                <td>
+                    Sabao em pó: 4 unidade(s)<br />
+                    Detergente Ypê:2 unidade(s)<br />
+                    Achocolatado Amália:1 unidade(s)<br />
+                    Shampoo Monange:1 unidade(s)<br />
+                    Leite Integral Cooper Rita:1 unidade(s)<br />
+                </td>
+                <td>R$ 100,00</td>
+              </tr>
+              <tr>
+                <td>17/05/2018</td>
+                <td>
+                    Sabao em pó: 4 unidade(s)<br />
+                    Detergente Ypê:2 unidade(s)<br />
+                </td>
+                <td>R$ 25,50</td>
+              </tr>
+              <tr>
+                <td>16/05/2018</td>
+                <td>
+                    Sabao em pó: 4 unidade(s)<br />
+                    Detergente Ypê:2 unidade(s)<br />
+                    Achocolatado Amália:1 unidade(s)<br />
+                </td>
+                <td>R$ 70,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
