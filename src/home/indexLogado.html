@@ -17,26 +17,43 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md" style="background-color:rgb(234,234,234);">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" style="width:87px;">
-            <img src="assets/img/logo.png">
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">HOME</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Encomendas</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contatos</a></li>
-                </ul>
-            </div>
-              <button id="registrar"type="button" class="btn btn-default btn-md navbar-btn navbar-right mr-2" data-toggle="modal" data-target="#registrarModal">Registrar</button>
-					    <button type="button" class="btn btn-primary btn-md navbar-btn navbar-right" data-toggle="modal" data-target="#entrarModal">Entrar</button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-light navbar-expand-md" style="background-color:rgb(234,234,234);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" style="width:87px;">
+          <img src="assets/img/logo.png">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navcol-1">
+              <ul class="nav navbar-nav">
+                  <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">HOME</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="#">Encomendas</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contatos</a></li>
+              </ul>
           </div>
-    </nav>
+          <div class="text">
+
+            <div class="dropdown">
+
+             <button class="btn btn-navbar dropdown-toggle" type="button" data-toggle="dropdown">
+               <span class="mr-2"> Olá, Breno! </span>
+               <i class="fas fa-user-circle font-icons"></i>
+               <span class="caret"></span>
+             </button>
+             <ul class="dropdown-menu text-center">
+               <li><a href="user.html">Perfil</a></li>
+               <hr class="mb-1 mt-1">
+               <li><a class="text-danger" href="index.html">Sair</a></li>
+             </ul>
+            </div>
+
+          </div>
+        </div>
+  </nav>
+
     <div data-ride="carousel" class="carousel slide" id="carousel-1">
     <div role="listbox" class="carousel-inner">
         <div class="carousel-item active"><img src="assets/img/slide 3.png" alt="Slide Image" class="w-100 d-block" /></div>
@@ -214,7 +231,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <a class="none" href="indexLogado.html"><button type="button" class="btn btn-primary">Entrar</button></a>
+        <a class="none" href="user.html"><button type="button" class="btn btn-primary">Entrar</button></a>
       </div>
     </div>
   </div>
