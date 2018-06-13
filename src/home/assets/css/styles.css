@@ -1,0 +1,16 @@
+a.none{
+    color: white;
+    text-decoration: none;
+}
+a.none:visited {
+    color: white;
+    text-decoration: none;
+}
+a.none:hover {
+    color: white;
+    text-decoration: none;
+}
+a.none:active {
+    color: white;
+    text-decoration: none;
+}
