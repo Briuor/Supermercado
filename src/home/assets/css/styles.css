@@ -22,7 +22,11 @@ a.none:active {
 }
 
 .position-fixed{
-  z-index: 1000;
+  z-index: 10;
+}
+
+.zindex-100{
+  z-index: 100;
 }
 
 .mt-6{
