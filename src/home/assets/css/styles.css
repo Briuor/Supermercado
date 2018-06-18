@@ -40,3 +40,30 @@ a.none:active {
 .price-font{
   font-size: 1.5rem;
 }
+
+ul.categoria {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.categoria {
+    float: left;
+}
+
+li a.categoria {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a.categoria:hover {
+    color: black;
+}
+
+.carrinho{
+  float: right;
+}
