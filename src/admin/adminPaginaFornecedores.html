@@ -65,10 +65,12 @@
 						    </thead>
 						    <tbody>
 						      <tr>
-						        <td>Bruno</td>
+						        <td>Mega G</td>
 						        <td>Rua Adolfo Tribist, 80, Vila Isabel</td>
 						        <td>(35)3621-6151</td>
-						        <td class="text-center"><button class="btn btn-warning">Listar</button></td>
+						        <td class="text-center">
+                                 <button class="btn btn-warning" data-toggle="modal" data-target="#listarEncomenda"> Listar</button>
+                                </td>
 						        <td>06/04/2018 - 16:00</td>
 						        <td>
 						        	<button class="btn btn-warning" data-toggle="modal" data-target="#editar">Editar</button>
@@ -91,28 +93,23 @@
         	<form class="form-group">
 
         	  <div class="">
-			  	<span class="h4">Cadastrar Produto</span>
+			  	<span class="h4">Cadastrar Fornecedores</span>
 	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	    	  </div>
 
-			  <label class="h5">Código:</label>			  
+			  <label class="h5">Fornecedor</label>			  
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Nome:</label>
+			  <label class="h5">Endereço</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Preço(R$):</label>
+			  <label class="h5">Telefone:</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Descrição:</label><br/>
+			  <label class="h5">Produtos:</label><br/>
 			  <textarea style="width: 100%">
 			  	
 			  </textarea>  <br />
-			  <label class="h5">Marca:</label>
+			  <label class="h5">Data Abastecimento:</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Fornecedor:</label>
-			  <input class="form-control" placeholder="" />
-
-	    	  <label class="h5">Imagem: </label>
-<!--     		  <img class="img-responsive" src="" style="width: 70px; height: 70px;"/>
- -->    		  <input type="file" /><br />
+			  
 			</form>          
         </div>
         <div class="modal-footer">
@@ -133,28 +130,27 @@
         	<form class="form-group">
 
         	  <div class="">
-			  	<span class="h4">Editar Produto</span>
+			  	<span class="h4">Editar Fornecedor</span>
 	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	    	  </div>
 
-			  <label class="h5">Código:</label>			  
-			  <input class="form-control" value="789232" />
-			  <label class="h5">Nome:</label>
-			  <input class="form-control" value="Achocolatado" />
-			  <label class="h5">Preço(R$):</label>
-			  <input class="form-control" value="3,49" />
-			  <label class="h5">Descrição:</label><br/>
-			  <textarea style="width: 100%">
-			  	
-			  </textarea>  <br />
-			  <label class="h5">Marca:</label>
-			  <input class="form-control" value="Santa Amália" />
-			  <label class="h5">Fornecedor:</label>
-			  <input class="form-control" value="Santa Amália" />
-
-	    	  <label class="h5">Imagem: </label>
-    		  <img class="img-responsive" src="assets/img/achocolatado.jpeg" style="width: 70px; height: 70px;"/><br />
-    		  <input type="file" /><br />
+			  <label class="h5">Fornecedor:</label>			  
+			  <input class="form-control" value="Mega G" />
+			  <label class="h5">Endereço:</label>
+			  <input class="form-control" value="Rua Adolfo Tribist, 80, Vila Isabel" />
+			  <label class="h5">Telefone:</label>
+			  <input class="form-control" value="(35)3621-6151" />
+			  <label class="h5">Produtos:</label><br/>
+			  <textarea style="width: 100%; height: 100px;">
+Sabao em pó
+Detergente Ypê
+Achocolatado Amália
+Shampoo Monange
+Leite Integral Cooper Rita
+		  </textarea>  <br />
+			  <label class="h5">Data Abastecimento:</label>
+			  <input class="form-control" value="06/04/2018 - 16:00" />
+			  
 			</form>          
         </div>
         <div class="modal-footer">
@@ -176,9 +172,44 @@
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
       	</div>
         <div class="modal-body">
-        	<p>Tem certeza que deseja remover o produto Achocolatado Santa Amália?</p>
+        	<p>Tem certeza que deseja remover o Fornecedor?</p>
         	<button class="btn btn-danger" id="removerUsuario">Sim</button>
         	<button class="btn btn-default" data-dismiss="modal">Nao</button>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
+
+<div class="modal fade" id="listarEncomenda" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Lista de Fornecedores</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-striped table-bordered" id="listaEncomendas">
+            <thead>
+              <tr>
+                <th>Produtos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+Sabao em pó<br />
+Detergente Ypê<br />
+Achocolatado Amália<br />
+Shampoo Monange<br />
+Leite Integral Cooper Rita   <br />             
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
         
       </div>
