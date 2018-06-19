@@ -29,12 +29,13 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">HOME</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="">Encomendas</a></li>
+                    <li class="nav-item" role="presentation">
+                      <a data-toggle="modal" data-target="#encomendasModal" class="nav-link" href="">Encomendas</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contatos</a></li>
                 </ul>
             </div>
               <button id="registrar" type="button" class="btn btn-default btn-md navbar-btn navbar-right mr-2" data-toggle="modal" data-target="#registrarModal">Registrar</button>
-			  <button type="button" class="btn btn-primary btn-md navbar-btn navbar-right" data-toggle="modal" data-target="#entrarModal">Entrar</button>
+			        <button type="button" class="btn btn-primary btn-md navbar-btn navbar-right" data-toggle="modal" data-target="#entrarModal">Entrar</button>
           </div>
     </nav>
     <div data-ride="carousel" class="carousel slide" id="carousel-1">
@@ -220,6 +221,30 @@
     </div>
   </div>
 </div>
+
+<!-- MODAL ENCOMENDAS -->
+
+<div class="modal fade" id="encomendasModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-danger" id="myModalLabel">Aviso</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        	<div class="form-group">
+        		<p>Você deve estar logado para realizar essa operação.</p>
+        	</div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button data-toggle="modal" data-target="#entrarModal" data-dismiss="modal" type="button" class="btn btn-primary">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
