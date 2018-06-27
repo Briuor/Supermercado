@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Produtos</title>
+    <title>Admin Relatorios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
@@ -36,9 +36,8 @@
                 <li class="sidebar-brand"> <a href="adminPaginaProdutos.html" style="color:rgb(255,255,255);">Admin Bruno</a></li>
                 <li> <a href="adminPaginaProdutos.html">Produtos</a></li>
                 <li> <a href="adminPaginaCliente.html" >Clientes</a></li>
-                <li> <a href="adminPaginaEncomendas.html" >Encomendas</a> </li>
-                <li> <a href="adminPaginaFornecedores.html" style="color:rgb(7,0,0);background-color:#ffffff;">Fornecedores</a></li>
-                <li> <a href="adminPaginaRelatorios.html" >Relatorios</a> </li>
+                <li> <a href="adminPaginaEncomendas.html">Encomendas</a><a href="adminPaginaFornecedores.html">Fornecedores</a></li>
+                <li> <a href="adminPaginaRelatorios.html"  style="color:rgb(7,0,0);background-color:#ffffff;">Relatorios</a></li>
                 <li> <a href="adminLogin/index.html" style="color: tomato; margin-top: 100px;">Sair</a></li>
             </ul>
         </div>
@@ -46,44 +45,80 @@
         <div class="page-content-wrapper">
             <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
             	<div class="row">
-                    <div class="col-md-12">
-				    	<h1>Fornecedores <button class="btn btn-success" type="button"
-                            data-toggle="modal" data-target="#cadastrar" style="margin-right: 10px;">Cadastrar Fornecedor</button>
-                        </h1>
+          <div class="col-md-12">
+            <div>
+				    	<h1>Relatório de Movimentação de Produto</h1>
 
-					</div>
-					<div class="col-md-12">
-						<table class="table table-striped table-bordered" id="listaEncomendas">
-						    <thead>
-						      <tr>
-						        <th>Fornecedor</th>
-						        <th>Endereço</th>
-						        <th>Telefone</th>
-						        <th>Produtos</th>
-						        <th>Data Abastecimento</th>
-						        <th>Operacao</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						        <td>Mega G</td>
-						        <td>Rua Adolfo Tribist, 80, Vila Isabel</td>
-						        <td>(35)3621-6151</td>
-						        <td class="text-center">
-                                 <button class="btn btn-warning" data-toggle="modal" data-target="#listarEncomenda"> Listar</button>
-                                </td>
-						        <td>06/04/2018 - 16:00</td>
-						        <td>
-						        	<button class="btn btn-warning" data-toggle="modal" data-target="#editar">Editar</button>
-						        	<button class="btn btn-danger" data-toggle="modal" data-target="#remover">Remover</button>
-						        </td>
-						      </tr>
-						    </tbody>
-						</table>
-					</div>
-				</div>
-	        </div>
-	    </div>
+              <div class="input-group" style="width: 60%; margin-bottom: 10px;">
+                <input type="text" class="form-control" id="myInput" placeholder="Digite o nome do produto para geração de seu Relatório">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Buscar</button>
+                </span>
+              </div>
+            </div>
+
+                    <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Cliene / Fornecedor</th>
+                <th>Vlr. Unit.</th>
+                <th>Entrada</th>
+                <th>Saida</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>30/05/2018</td>
+                <td class="text-center">Rodrigo M. Rodrigues<br> NOVA SAFRA</td>
+                <td class="text-center">2,00</td>
+                <td class="text-center">0,00</td>
+                <td class="text-center">8,00</td>
+              </tr>
+
+              <tr>
+                <td>30/05/2018</td>
+                <td class="text-center">John de Paula <br>ALIMENTICIA LTDA</td>
+                <td class="text-center">2,10</td>
+                <td class="text-center">0,00</td>
+                <td class="text-center">10,00</td>
+              </tr>
+
+              <tr>
+                <td>03/05/2018</td>
+                  <td class="text-center">Roger dos Santos<br> CRISTAL</td>
+                <td class="text-center">2,10</td>
+                <td class="text-center">0,00</td>
+                <td class="text-center">50,00</td>
+              </tr>
+
+              <tr>
+                <td>05/06/2018</td>
+                <td class="text-center">Maurício de Souza<br>RUBENS LTDA</td>
+                <td class="text-center">2,15</td>
+                <td class="text-center">0,00</td>
+                <td class="text-center">12,00</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class="row">
+            <div class="col-4 ml-5">
+              <button class="btn btn-default" type="button">Gerar PDF</button>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-default" type="button">Gerar DOCX</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-default" type="button">Imprimir</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+	</div>
+</div>
 
     <!-- MODAL DE CADASTRAR PRODUTO -->
 <div class="modal fade" id="cadastrar" role="dialog">
@@ -94,23 +129,28 @@
         	<form class="form-group">
 
         	  <div class="">
-			  	<span class="h4">Cadastrar Fornecedores</span>
+			  	<span class="h4">Cadastrar Produto</span>
 	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	    	  </div>
 
-			  <label class="h5">Fornecedor</label>
+			  <label class="h5">Código:</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Endereço</label>
+			  <label class="h5">Nome:</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Telefone:</label>
+			  <label class="h5">Preço(R$):</label>
 			  <input class="form-control" placeholder="" />
-			  <label class="h5">Produtos:</label><br/>
+			  <label class="h5">Descrição:</label><br/>
 			  <textarea style="width: 100%">
 
 			  </textarea>  <br />
-			  <label class="h5">Data Abastecimento:</label>
+			  <label class="h5">Marca:</label>
+			  <input class="form-control" placeholder="" />
+			  <label class="h5">Fornecedor:</label>
 			  <input class="form-control" placeholder="" />
 
+	    	  <label class="h5">Imagem: </label>
+<!--     		  <img class="img-responsive" src="" style="width: 70px; height: 70px;"/>
+ -->    		  <input type="file" /><br />
 			</form>
         </div>
         <div class="modal-footer">
@@ -131,27 +171,28 @@
         	<form class="form-group">
 
         	  <div class="">
-			  	<span class="h4">Editar Fornecedor</span>
+			  	<span class="h4">Editar Produto</span>
 	    	  	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	    	  </div>
 
-			  <label class="h5">Fornecedor:</label>
-			  <input class="form-control" value="Mega G" />
-			  <label class="h5">Endereço:</label>
-			  <input class="form-control" value="Rua Adolfo Tribist, 80, Vila Isabel" />
-			  <label class="h5">Telefone:</label>
-			  <input class="form-control" value="(35)3621-6151" />
-			  <label class="h5">Produtos:</label><br/>
-			  <textarea style="width: 100%; height: 100px;">
-Sabao em pó
-Detergente Ypê
-Achocolatado Amália
-Shampoo Monange
-Leite Integral Cooper Rita
-		  </textarea>  <br />
-			  <label class="h5">Data Abastecimento:</label>
-			  <input class="form-control" value="06/04/2018 - 16:00" />
+			  <label class="h5">Código:</label>
+			  <input class="form-control" value="123456" />
+			  <label class="h5">Nome:</label>
+			  <input class="form-control" value="Suco" />
+			  <label class="h5">Preço(R$):</label>
+			  <input class="form-control" value="0,99" />
+			  <label class="h5">Descrição:</label><br/>
+			  <textarea style="width: 100%">
 
+			  </textarea>  <br />
+			  <label class="h5">Marca:</label>
+			  <input class="form-control" value="Tang" />
+			  <label class="h5">Fornecedor:</label>
+			  <input class="form-control" value="Tang" />
+
+	    	  <label class="h5">Imagem: </label>
+    		  <img class="img-responsive" src="assets/img/suco.jpg" style="width: 70px; height: 70px;"/><br />
+    		  <input type="file" /><br />
 			</form>
         </div>
         <div class="modal-footer">
@@ -173,44 +214,9 @@ Leite Integral Cooper Rita
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
       	</div>
         <div class="modal-body">
-        	<p>Tem certeza que deseja remover o Fornecedor?</p>
+        	<p>Tem certeza que deseja remover o produto Suco Tang?</p>
         	<button class="btn btn-danger" id="removerUsuario">Sim</button>
         	<button class="btn btn-default" data-dismiss="modal">Nao</button>
-        </div>
-
-      </div>
-
-    </div>
-</div>
-
-<div class="modal fade" id="listarEncomenda" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Lista de Fornecedores</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-            <table class="table table-striped table-bordered" id="listaEncomendas">
-            <thead>
-              <tr>
-                <th>Produtos</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-Sabao em pó<br />
-Detergente Ypê<br />
-Achocolatado Amália<br />
-Shampoo Monange<br />
-Leite Integral Cooper Rita   <br />
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
         </div>
 
       </div>
